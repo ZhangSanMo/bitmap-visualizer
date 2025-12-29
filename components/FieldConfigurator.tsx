@@ -139,54 +139,59 @@ const FieldConfigurator: React.FC<FieldConfiguratorProps> = ({
 
         {/* Add New Field Form */}
         {isAdding && (
-          <div className="grid grid-cols-12 gap-4 items-center bg-slate-700/30 p-4 rounded-lg border border-dashed border-slate-600 animate-in fade-in slide-in-from-top-2 duration-200">
-             <div className="col-span-1 flex justify-center">
-                <div className="w-4 h-4 rounded-full bg-slate-600" />
+          <div className="flex gap-4 bg-slate-700/30 p-4 rounded-lg border border-dashed border-slate-600 animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="shrink-0 mt-2">
+              <div className="w-4 h-4 rounded-full bg-slate-600" />
+            </div>
+            
+            <div className="flex-grow flex flex-wrap gap-x-4 gap-y-3 items-center">
+              <div className="flex-grow min-w-[120px]">
+                <input
+                  type="text"
+                  placeholder="Field Name"
+                  value={newField.name}
+                  onChange={(e) => setNewField({ ...newField, name: e.target.value })}
+                  className="w-full bg-slate-900 border border-slate-600 rounded px-2 py-1 text-sm text-white focus:ring-1 focus:ring-emerald-500 outline-none"
+                  autoFocus
+                />
               </div>
-            <div className="col-span-3">
-              <input
-                type="text"
-                placeholder="Field Name"
-                value={newField.name}
-                onChange={(e) => setNewField({ ...newField, name: e.target.value })}
-                className="w-full bg-slate-900 border border-slate-600 rounded px-2 py-1 text-sm text-white focus:ring-1 focus:ring-emerald-500 outline-none"
-                autoFocus
-              />
-            </div>
-            <div className="col-span-3 flex items-center gap-2">
-              <input
-                type="number"
-                placeholder="Start"
-                min={0}
-                max={totalBits - 1}
-                value={newField.startBit}
-                onChange={(e) => setNewField({ ...newField, startBit: parseInt(e.target.value) || 0 })}
-                className="w-16 bg-slate-900 border border-slate-600 rounded px-2 py-1 text-sm text-center text-white focus:ring-1 focus:ring-emerald-500 outline-none"
-              />
-              <span className="text-slate-400">-</span>
-              <input
-                type="number"
-                placeholder="End"
-                min={0}
-                max={totalBits - 1}
-                value={newField.endBit}
-                onChange={(e) => setNewField({ ...newField, endBit: parseInt(e.target.value) || 0 })}
-                className="w-16 bg-slate-900 border border-slate-600 rounded px-2 py-1 text-sm text-center text-white focus:ring-1 focus:ring-emerald-500 outline-none"
-              />
-            </div>
-            <div className="col-span-5 flex justify-end gap-2">
-              <button
-                onClick={handleAddField}
-                className="flex items-center gap-1 px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white text-xs rounded transition-colors"
-              >
-                <Check size={14} /> Save
-              </button>
-              <button
-                onClick={() => setIsAdding(false)}
-                className="flex items-center gap-1 px-3 py-1 bg-slate-600 hover:bg-slate-500 text-white text-xs rounded transition-colors"
-              >
-                <X size={14} /> Cancel
-              </button>
+              
+              <div className="flex items-center gap-2 shrink-0">
+                <input
+                  type="number"
+                  placeholder="Start"
+                  min={0}
+                  max={totalBits - 1}
+                  value={newField.startBit}
+                  onChange={(e) => setNewField({ ...newField, startBit: parseInt(e.target.value) || 0 })}
+                  className="w-16 bg-slate-900 border border-slate-600 rounded px-2 py-1 text-sm text-center text-white focus:ring-1 focus:ring-emerald-500 outline-none"
+                />
+                <span className="text-slate-400">-</span>
+                <input
+                  type="number"
+                  placeholder="End"
+                  min={0}
+                  max={totalBits - 1}
+                  value={newField.endBit}
+                  onChange={(e) => setNewField({ ...newField, endBit: parseInt(e.target.value) || 0 })}
+                  className="w-16 bg-slate-900 border border-slate-600 rounded px-2 py-1 text-sm text-center text-white focus:ring-1 focus:ring-emerald-500 outline-none"
+                />
+              </div>
+
+              <div className="flex items-center gap-2 ml-auto">
+                <button
+                  onClick={handleAddField}
+                  className="flex items-center gap-1 px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white text-xs rounded transition-colors whitespace-nowrap"
+                >
+                  <Check size={14} /> Save
+                </button>
+                <button
+                  onClick={() => setIsAdding(false)}
+                  className="flex items-center gap-1 px-3 py-1 bg-slate-600 hover:bg-slate-500 text-white text-xs rounded transition-colors whitespace-nowrap"
+                >
+                  <X size={14} /> Cancel
+                </button>
+              </div>
             </div>
           </div>
         )}

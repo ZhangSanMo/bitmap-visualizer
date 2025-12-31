@@ -1,17 +1,29 @@
 # BitMap Visualizer
 
-An interactive bit field calculator and analyzer designed to help developers visualize, manipulate, and define custom bit fields within a data structure.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-19-blue.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Build-Vite-646CFF.svg)](https://vitejs.dev/)
+[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-F38020.svg)](https://bitmap-visualizer.pages.dev/)
 
-Official Site: [BitMap Visualizer](https://bitmap-visualizer.pages.dev/)
+**BitMap Visualizer** is a powerful, interactive **bit field calculator** and **binary data analyzer**. It is specifically designed for embedded engineers, systems programmers, and developers to visualize, manipulate, and define custom bit fields within 64-bit data structures.
 
-## Features
+🔗 **Official Site**: [https://bitmap-visualizer.pages.dev/](https://bitmap-visualizer.pages.dev/)
 
-- **Interactive Bit Grid**: Double-click bits to toggle them and see real-time updates.
-- **Custom Field Configuration**: Define named bit fields with start and end positions.
-- **Real-time Value Sync**: Supports Hex, Decimal, and Binary input/output.
-- **64-bit Support**: Handles up to 64-bit unsigned integers.
-- **Shareable Configurations**: Easily share your bit field setups via URL parameters.
-- **Responsive Design**: Built with React and Tailwind CSS for a modern, dark-themed UI.
+## Key Features
+
+- 🖱️ **Interactive Bit Manipulation**: Toggle individual bits with a click and see immediate results in Hex, Decimal, and Binary.
+- 🛠️ **Custom Bit Field Definition**: Define named fields with specific bit ranges (e.g., `Control Register [0:3]`, `Status [4:7]`).
+- 🔄 **Real-time Multi-format Sync**: Bidirectional synchronization between binary grid, hex input, and decimal values.
+- 🚀 **64-bit Architecture Support**: Full support for 64-bit unsigned integers (unsigned long long), essential for modern hardware registers.
+- 🔗 **Shareable States**: Encode your field configurations directly into the URL for easy sharing and documentation.
+- 🎨 **Modern Developer UI**: A clean, responsive, dark-mode interface built with React 19 and Tailwind CSS.
+
+## Use Cases
+
+- **Embedded Systems**: Mapping CPU registers and peripheral control bits.
+- **Network Protocols**: Visualizing packet headers and flag structures.
+- **Data Serialization**: Debugging custom binary formats and bit-packed structures.
+- **Education**: Learning binary arithmetic and bitwise operations.
 
 ## Getting Started
 

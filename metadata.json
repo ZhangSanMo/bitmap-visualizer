@@ -1,5 +1,0 @@
-{
-  "name": "BitMap Visualizer",
-  "description": "A powerful tool to visualize, manipulate, and define custom bit fields within a data structure. Supports up to 64-bit integers with real-time updates.",
-  "requestFramePermissions": []
-}

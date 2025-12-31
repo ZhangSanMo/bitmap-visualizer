@@ -2,7 +2,7 @@
 
 An interactive bit field calculator and analyzer designed to help developers visualize, manipulate, and define custom bit fields within a data structure.
 
-![BitMap Visualizer](https://bitmap-visualizer.pages.dev/)
+Official Site: [BitMap Visualizer](https://bitmap-visualizer.pages.dev/)
 
 ## Features
 
